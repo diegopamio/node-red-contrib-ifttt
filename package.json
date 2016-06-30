@@ -1,6 +1,6 @@
 {
   "name": "node-red-ifttt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node-red node to connect to ifttt Maker channel",
   "homepage": "http://github.com/diegopamio/node-red-ifttt",
   "author": {
