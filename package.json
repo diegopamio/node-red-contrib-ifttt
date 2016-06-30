@@ -9,7 +9,7 @@
     "url": "http://github.com/diegopamio"
   },
   "files": [
-    "dist"
+    "nodes"
   ],
   "main": "dist/index.js",
   "keywords": [
