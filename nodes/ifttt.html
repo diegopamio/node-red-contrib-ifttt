@@ -1,0 +1,51 @@
+<script type="text/x-red" data-template-name="ifttt out">
+    <div class="form-row">
+        <label for="node-input-eventName"><i class="fa fa-globe"></i> Event Name</label>
+        <input type="text" id="node-input-eventName">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ifttt out">
+    <p>Publishes <b>msg.payload.value1, 2 and 3</b> to the Maker channel in IFTTT in the specified channel.</p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('ifttt out',{
+    category: 'output',
+    color:"Silver",
+    inputs:1,
+    outputs:0,
+    icon: "pnTiny.png",
+    align: "right",
+    label: function() {
+      return this.event||"ifttt";
+    },
+    labelStyle: function() {
+      return this.event?"node_label_italic":"";
+    },
+    defaults: {
+      eventName: {type:"text", value:"event1", required:true},
+      key: {type:"ifttt-key", required:true}
+    }
+  });
+</script>
+
+
+<script type="text/x-red" data-template-name="ifttt-key">
+    <div class="form-row">
+        <label for="node-config-input-key"><i class="fa fa-tag"></i> Key</label>
+        <input type="text" id="node-config-input-key">
+    </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('ifttt-key',{
+    category: 'config',
+    defaults: {
+      key: {value:"demo",required:true}
+    },
+    label: function() {
+      return this.key;
+    }
+  });
+</script>
