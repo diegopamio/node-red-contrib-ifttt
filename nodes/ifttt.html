@@ -23,7 +23,7 @@
       return this.event?"node_label_italic":"";
     },
     defaults: {
-      eventName: {type:"text", value:"event1", required:true},
+      eventName: {value:"event1", required:true},
       key: {type:"ifttt-key", required:true}
     }
   });
@@ -40,8 +40,8 @@
 <script type="text/javascript">
   RED.nodes.registerType('ifttt-key',{
     category: 'config',
-    defaults: {
-      key: {value:"demo",required:true}
+    credentials: {
+      key: {type:"text"}
     },
     label: function() {
       return this.key;
