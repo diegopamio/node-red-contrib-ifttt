@@ -42,7 +42,12 @@
       "mocha": true
     }
   },
-  "repository": "diegopamio/node-red-ifttt",
+  "node-red": {
+    "nodes": {
+      "ifttt": "nodes/ifttt.js"
+    }
+  },
+  "repository": "diegopamio/node-red-contrib-ifttt",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
