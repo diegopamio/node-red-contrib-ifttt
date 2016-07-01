@@ -1,38 +1,6 @@
-<script type="text/x-red" data-template-name="ifttt out">
-    <div class="form-row">
-        <label for="node-input-eventName"><i class="fa fa-globe"></i> Event Name</label>
-        <input type="text" id="node-input-eventName">
-    </div>
-</script>
-
-<script type="text/x-red" data-help-name="ifttt out">
-    <p>Publishes <b>msg.payload.value1, 2 and 3</b> to the Maker channel in IFTTT in the specified channel.</p>
-</script>
-
-<script type="text/javascript">
-  RED.nodes.registerType('ifttt out',{
-    category: 'output',
-    color:"Silver",
-    inputs:1,
-    outputs:0,
-    align: "right",
-    label: function() {
-      return this.event||"ifttt";
-    },
-    labelStyle: function() {
-      return this.event?"node_label_italic":"";
-    },
-    defaults: {
-      eventName: {value:"event1", required:true},
-      key: {type:"ifttt-key", required:true}
-    }
-  });
-</script>
-
-
 <script type="text/x-red" data-template-name="ifttt-key">
     <div class="form-row">
-        <label for="node-config-input-key"><i class="fa fa-tag"></i> Key</label>
+        <label for="node-config-input-key"><i class="fa fa-key"></i> Key</label>
         <input type="text" id="node-config-input-key">
     </div>
 </script>
@@ -44,7 +12,44 @@
       key: {type:"text"}
     },
     label: function() {
-      return this.key;
+      return this.credentials? this.credentials.key : 'key';
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="ifttt out">
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-key"></i> Key</label>
+        <input type="text" id="node-input-key">
+    </div>
+    <div class="form-row">
+        <label for="node-input-eventName"><i class="fa fa-bolt"></i> Event Name</label>
+        <input type="text" id="node-input-eventName">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ifttt out">
+    <p>Publishes <b>msg.payload.value1, 2 and 3</b> to the Maker channel in IFTTT in the specified channel.</p>
+    <p>To configure the IFTTT channel, go to: <a href="https://maker.ifttt.com/use/">https://maker.ifttt.com/use/</a></p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('ifttt out',{
+    category: 'output',
+    color:"#C0DEED",
+    inputs:1,
+    outputs:0,
+    icon: 'logo.png',
+    align: "right",
+    label: function() {
+      return this.eventName||"ifttt";
+    },
+    labelStyle: function() {
+      return this.eventName?"node_label_italic":"";
+    },
+    defaults: {
+      eventName: {value:"event1", required:true},
+      key: {type:"ifttt-key", required:true}
     }
   });
 </script>

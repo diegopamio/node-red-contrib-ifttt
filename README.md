@@ -21,7 +21,7 @@ Anyone can argue that node-red is a superset of IFTTT and everything you can do 
 ## Installation
 
 ```sh
-$ npm install node-red-ifttt
+$ npm install node-red-contrib-ifttt
 ```
 
 ## Usage
