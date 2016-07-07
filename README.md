@@ -1,4 +1,4 @@
-# node-red-ifttt [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# node-red-ifttt [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status](https://coveralls.io/repos/github/diegopamio/node-red-contrib-ifttt/badge.svg?branch=master)](https://coveralls.io/github/diegopamio/node-red-contrib-ifttt?branch=master)
 > A node-red node to connect to ifttt Maker channel
 
 ## Why(s)?
@@ -37,11 +37,10 @@ The module has three node definitions:
 MIT © [Diego Pamio](http://github.com/diegopamio)
 
 
-[npm-image]: https://badge.fury.io/js/node-red-ifttt.svg
-[npm-url]: https://npmjs.org/package/node-red-ifttt
-[travis-image]: https://travis-ci.org/diegopamio/node-red-ifttt.svg?branch=master
-[travis-url]: https://travis-ci.org/diegopamio/node-red-ifttt
-[daviddm-image]: https://david-dm.org/diegopamio/node-red-ifttt.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/diegopamio/node-red-ifttt
-[coveralls-image]: https://coveralls.io/repos/diegopamio/node-red-ifttt/badge.svg
-[coveralls-url]: https://coveralls.io/r/diegopamio/node-red-ifttt
+[npm-image]: https://badge.fury.io/js/node-red-contrib-ifttt.svg
+[npm-url]: https://npmjs.org/package/node-red-contrib-ifttt
+[travis-image]: https://travis-ci.org/diegopamio/node-red-contrib-ifttt.svg?branch=master
+[travis-url]: https://travis-ci.org/diegopamio/node-red-contrib-ifttt
+[daviddm-image]: https://david-dm.org/diegopamio/node-red-contrib-ifttt.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/diegopamio/node-red-contrib-ifttt
+[coveralls-image]: https://coveralls.io/repos/diegopamio/node-red-contrib-ifttt/badge.svg
