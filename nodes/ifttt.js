@@ -16,14 +16,16 @@ module.exports = function (RED) {
     node.key = RED.nodes.getNode(config.key);
     this.on('input', function (msg) {
       node.status({fill: 'blue', shape: 'dot', text: 'Sending...'});
+      var iftttPayload = {};
+      if (msg.payload) {
+        iftttPayload.value1 = msg.payload.value1;
+        iftttPayload.value2 = msg.payload.value2;
+        iftttPayload.value3 = msg.payload.value3;
+      }
       request({
         uri: 'https://maker.ifttt.com/trigger/' + node.config.eventName + '/with/key/' + node.key.credentials.key,
         method: 'POST',
-        json: {
-          value1: msg.payload.value1,
-          value2: msg.payload.value2,
-          value3: msg.payload.value3
-        }
+        json: iftttPayload
       }, function (error, response, body) {
         if (!error && response.statusCode === 200) {
           node.status({fill: 'green', shape: 'dot', text: 'Sent!'});
