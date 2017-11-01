@@ -30,10 +30,11 @@ module.exports = function (RED) {
         if (!error && response.statusCode === 200) {
           node.status({fill: 'green', shape: 'dot', text: 'Sent!'});
         } else {
+          var errorMessage;
           try {
-            var errorMessage = (JSON.parse(body).hasOwnProperty('errors'))? JSON.parse(body).errors[0].message : JSON.parse(body)
-          } catch(e) {
-            var errorMessage = (body.hasOwnProperty('errors'))? body.errors[0].message : body
+            errorMessage = (JSON.parse(body).hasOwnProperty('errors')) ? JSON.parse(body).errors[0].message : JSON.parse(body);
+          } catch (e) {
+            errorMessage = (body.hasOwnProperty('errors')) ? body.errors[0].message : body;
           }
           node.status({fill: 'red', shape: 'dot', text: 'Error!'});
           node.error(errorMessage);
