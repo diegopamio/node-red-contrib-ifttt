@@ -22,8 +22,9 @@ module.exports = function (RED) {
         iftttPayload.value2 = msg.payload.value2;
         iftttPayload.value3 = msg.payload.value3;
       }
+      var eventName = msg.eventName ? msg.eventName : node.config.eventName;
       request({
-        uri: 'https://maker.ifttt.com/trigger/' + node.config.eventName + '/with/key/' + node.key.credentials.key,
+        uri: 'https://maker.ifttt.com/trigger/' + eventName + '/with/key/' + node.key.credentials.key,
         method: 'POST',
         json: iftttPayload
       }, function (error, response, body) {

@@ -29,6 +29,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="ifttt out">
+    <p>Set <b>msg.eventName</b> to override the node configuration eventName.</p> 
     <p>Publishes <b>msg.payload.value1, 2 and 3</b> to the Maker channel in IFTTT in the specified channel.</p>
     <p>To configure the IFTTT channel, go to: <a href="https://maker.ifttt.com/use/">https://maker.ifttt.com/use/</a></p>
 </script>
@@ -48,7 +49,7 @@
       return this.eventName?"node_label_italic":"";
     },
     defaults: {
-      eventName: {value:"event1", required:true},
+      eventName: {value:"event1", required:false},
       key: {type:"ifttt-key", required:true}
     }
   });
