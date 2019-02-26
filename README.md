@@ -1,5 +1,5 @@
 # node-red-ifttt [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status](https://coveralls.io/repos/github/diegopamio/node-red-contrib-ifttt/badge.svg?branch=master)](https://coveralls.io/github/diegopamio/node-red-contrib-ifttt?branch=master)
-> A node-red node to connect to ifttt Maker channel
+> A node-red node to connect to ifttt Webhooks channel (aka Maker channel)
 
 ## Why(s)?
 
