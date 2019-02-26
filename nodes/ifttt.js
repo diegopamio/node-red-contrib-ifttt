@@ -35,7 +35,8 @@ module.exports = function (RED) {
           try {
             errorMessage = (JSON.parse(body).hasOwnProperty('errors')) ? JSON.parse(body).errors[0].message : JSON.parse(body);
           } catch (e) {
-            errorMessage = (body.hasOwnProperty('errors')) ? body.errors[0].message : body;
+            node.error("IFTTT Read error");
+            errorMessage = e;
           }
           node.status({fill: 'red', shape: 'dot', text: 'Error!'});
           node.error(errorMessage);
