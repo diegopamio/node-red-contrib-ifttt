@@ -1,5 +1,5 @@
 var request = require('request');
-var IFTT_CONNECTION_TIMEOUT_MS = 20000;
+var IFTTT_CONNECTION_TIMEOUT_MS = 20000;
 
 module.exports = function (RED) {
   // This is a config node holding the keys for connecting to PubNub
